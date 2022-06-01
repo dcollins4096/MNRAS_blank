@@ -13,45 +13,25 @@
 \usepackage{bm}		% Bold maths symbols, including upright Greek
 \usepackage{pdflscape}	% Landscape pages
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%% AUTHORS - PLACE YOUR OWN MACROS HERE %%%%%%
-
-% Please keep new commands to a minimum, and use \newcommand not \def to avoid
-% overwriting existing commands. Example:
-%\newcommand{\pcm}{\,cm$^{-2}$}	% per cm-squared
-\newcommand{\kms}{\,km\,s$^{-1}$} % kilometres per second
-\newcommand{\bibtex}{\textsc{Bib}\!\TeX} % bibtex. Not quite the correct typesetting, but close enough
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{ mnras_packages}
 
 
-% Use vector fonts, so it zooms properly in on-screen viewing software
-% Don't change these lines unless you know what you are doing
-\usepackage[T1]{fontenc}
-\usepackage{ae,aecompl}
-
-% MNRAS is set in Times font. If you don't have this installed (most LaTeX
-% installations will be fine) or prefer the old Computer Modern fonts, comment
-% out the following line
-\usepackage{newtxtext,newtxmath}
-% Depending on your LaTeX fonts installation, you might get better results with one of these:
-%\usepackage{mathptmx}
-%\usepackage{txfonts}
-
-%%%%%%%%%%%%%%%%%%% TITLE PAGE %%%%%%%%%%%%%%%%%%%
-
+%%%%%% Don't change these lines
 \input title
-
+\begin{document}
+\label{firstpage}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}}
+\maketitle
 \input abstract
+%%%%%%
 
+
+%optional.
 \input mnras_toc
 
 \input introduction
 
 %%%%%%%%%%%%%%%%%%%% REFERENCES %%%%%%%%%%%%%%%%%%
-
-% The best way to enter references is to use BibTeX:
 
 \bibliographystyle{mnras}
 \bibliography{main.bib} % if your bibtex file is called example.bib
