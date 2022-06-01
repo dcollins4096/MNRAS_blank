@@ -1,0 +1,7 @@
+#!/bin/tcsh
+
+
+foreach i (example.bib example.eps example.png example.ps mnras.bst mnras.cls mnras_guide.pdf mnras_guide.tex mnras_template.tex  )
+curl -O https://mirrors.rit.edu/CTAN/macros/latex/contrib/mnras/$i
+end
+#end
