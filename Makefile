@@ -1,17 +1,17 @@
 
 
-files = density.tex introduction.tex main.tex results.tex title.tex
-
+files = main.tex
+name = main
 
 
 main.pdf: $(files)
-	pdflatex main
-	bibtex main
-	pdflatex main
-	pdflatex main
+	pdflatex $(name)
+	bibtex   $(name)
+	pdflatex $(name)
+	pdflatex $(name)
 
 o: $(files)
-	pdflatex main
+	pdflatex $(name)
 
 clean:
 	-@rm -f *.{aux,toc,dvi,lof,lot,log,lom,bbl,bcf,blg,pdf,ps,out,run.xml} *~
